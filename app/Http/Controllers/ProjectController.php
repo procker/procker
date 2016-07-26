@@ -18,7 +18,7 @@ class ProjectController extends Controller
     {
         $user = \Auth::user();
 		$projects = $user->projects;
-		return view('projects.index', compact('projects'));
+		return view('projects.projects', compact('projects'));
     }
 
     /**

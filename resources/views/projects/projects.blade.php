@@ -7,7 +7,7 @@
    <button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New Project</button>
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Projects - @{{vm.name}}</div>
+                <div class="panel-heading">Projects - @{{name}}</div>
 
                 <div class="panel-body">
                     You are logged in!

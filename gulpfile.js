@@ -14,6 +14,8 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss');
     mix.scripts([
+        'projects/projects.module.js',
+        'projects/projects.controller.js',
         'project/project.module.js',
         'project/project.controller.js',
         'procker.module.js',

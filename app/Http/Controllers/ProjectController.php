@@ -18,6 +18,7 @@ class ProjectController extends Controller
     {
         $user = \Auth::user();
 		$projects = $user->projects;
+
 		return view('projects.projects', compact('projects'));
     }
 
@@ -28,7 +29,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return 'post received';
     }
 
     /**

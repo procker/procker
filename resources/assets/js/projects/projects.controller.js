@@ -1,11 +1,6 @@
 (function(){
     'use strict';
 
-    angular.module('projects',[]);
-})();
-(function(){
-    'use strict';
-
     angular.module('projects')
         .controller('projectsCtrl', projectsCtrl);
     projectsCtrl.$inject = ['$http','CSRF_TOKEN'];
@@ -34,35 +29,3 @@
         }
     }
 })();
-(function(){
-    'use strict';
-
-    angular.module('project',[]);
-})();
-(function(){
-    'use strict';
-
-    angular.module('project')
-        .controller('projectCtrl', projectCtrl);
-
-    function projectCtrl(){
-        var vm = this;
-    }
-})();
-(function(){
-    'use strict';
-
-    angular.module('procker',['project','projects']);
-})();
-(function() {
-    'use strict';
-
-    angular.module('procker')
-        .controller('prockerCtrl', prockerCtrl);
-
-    function prockerCtrl(){
-        var vm = this;
-        vm.name = "ben"
-    }
-})();
-//# sourceMappingURL=app.js.map

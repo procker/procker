@@ -1,5 +1,5 @@
 (function(){
     'use strict';
 
-    angular.module('procker',['project']);
+    angular.module('procker',['project','projects']);
 })();

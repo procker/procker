@@ -41,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Procker
                 </a>
             </div>
 
@@ -72,7 +72,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid app-wrapper">
         <div class="sidebar col-lg-2">
             <button class="btn btn-primary new-project">NEW</button>
         </div>

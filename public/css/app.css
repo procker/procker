@@ -1,15 +1,36 @@
-.navbar {
-  margin-bottom: 0; }
+html, body {
+  height: 100%; }
 
-.sidebar {
-  border-right: solid thin #ccc; }
+body {
+  background-color: #eee; }
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #607d8b;
+  color: #ffeb3b; }
+  .navbar .navbar-brand {
+    color: #ffeb3b; }
+  .navbar ul.navbar-nav li a {
+    color: #ffeb3b; }
 
 .list-heading {
   margin-bottom: 1em; }
 
-.content-wrapper {
-  padding-left: 0;
-  padding-right: 0; }
+.app-wrapper {
+  min-height: calc(100% - 3.5em);
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0; }
+  .app-wrapper .sidebar {
+    border-right: solid thin #ccc;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    background-color: white;
+    padding-top: 1em; }
+  .app-wrapper .content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 100%; }
 
 .projects-list {
   background-color: #eee;

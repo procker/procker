@@ -1,15 +1,47 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$listBackgroundGrey: #eee;
+$sidebarBackground: white;
+$prockerGrey: #607d8b;
+$prockerText: #ffeb3b;
 
+html, body{
+  height: 100%;
+}
+body{
+  background-color: $listBackgroundGrey;
+}
 .navbar{
   margin-bottom: 0;
-}
-.sidebar{
-  border-right: solid thin #ccc;
+  background-color: $prockerGrey;
+  color: $prockerText;
+  .navbar-brand{
+    color: $prockerText;
+  }
+  ul.navbar-nav{
+    li{
+      a{
+        color: $prockerText;
+      }
+    }
+  }
 }
 .list-heading{
   margin-bottom: 1em;
 }
-.content-wrapper{
-  padding-left: 0;
-  padding-right: 0;
+.app-wrapper{
+  min-height: calc(100% - 3.5em);
+  display: flex;
+  padding: 0;
+  .sidebar{
+    border-right: solid thin #ccc;
+    flex-grow: 1;
+    background-color: $sidebarBackground;
+    padding-top: 1em;
+  }
+  .content-wrapper{
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 100%;
+
+  }
 }

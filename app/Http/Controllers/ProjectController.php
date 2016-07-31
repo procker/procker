@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
+use Validator;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +20,7 @@ class ProjectController extends Controller
     {
         $user = \Auth::user();
 		$projects = $user->projects;
+//		var_dump(reset($projects)); die();
 
 		return view('projects.projects', compact('projects'));
     }
@@ -40,6 +43,20 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+		$validator = Validator::make($request->all(), [
+
+		]);
+		if($validator->fails()){
+
+		}
+		$project = new Project;
+		$project->name = $request->name;
+		$project->description = $request->description;
+		\Auth::user()->projects()->save($project);
+//		$project->user = \Auth::user();
+//		$project->save();
+
+		return response()->json($project);
         //
     }
 

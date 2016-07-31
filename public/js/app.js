@@ -27,7 +27,6 @@
             $http(req).then(function(data){
                 console.log(data);
             });
-            console.log('create project called');
             //$http.post('/projects/',vm.newProject,).then(function(response){
             //    console.log(response);
             //});

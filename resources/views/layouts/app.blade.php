@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Procker</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -72,8 +72,14 @@
             </div>
         </div>
     </nav>
-
-    @yield('content')
+    <div class="container-fluid">
+        <div class="sidebar col-lg-2">
+            <button class="btn btn-primary new-project">NEW</button>
+        </div>
+        <div class="content-wrapper col-lg-10">
+            @yield('content')
+        </div>
+    </div>
 
 
 

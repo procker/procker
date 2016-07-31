@@ -1,2 +1,15 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+.navbar{
+  margin-bottom: 0;
+}
+.sidebar{
+  border-right: solid thin #ccc;
+}
+.list-heading{
+  margin-bottom: 1em;
+}
+.content-wrapper{
+  padding-left: 0;
+  padding-right: 0;
+}

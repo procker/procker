@@ -11,6 +11,21 @@
     projectsCtrl.$inject = ['$http','CSRF_TOKEN'];
     function projectsCtrl($http, CSRF_TOKEN){
         var vm = this;
+        vm.projects = [];
+        vm.getProjects = function(){
+            var req = {
+                method:'GET',
+                url: '/project',
+                headers: {
+                    'csrftoken': CSRF_TOKEN
+                }
+            };
+            $http(req).then(function(data){
+                vm.projects = data.data;
+            });
+        };
+        // load the list of projects
+        vm.getProjects();
         vm.newProject = {
             name: 'test',
             description: 'test description'

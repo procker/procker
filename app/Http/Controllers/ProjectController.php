@@ -20,10 +20,13 @@ class ProjectController extends Controller
     {
         $user = \Auth::user();
 		$projects = $user->projects;
-//		var_dump(reset($projects)); die();
-
-		return view('projects.projects', compact('projects'));
+		return response()->json($projects);
     }
+
+	public function view()
+	{
+		return view('projects.projects');
+	}
 
     /**
      * Show the form for creating a new resource.

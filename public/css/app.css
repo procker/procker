@@ -1,2 +1,47 @@
+.navbar {
+  margin-bottom: 0; }
+
+.sidebar {
+  border-right: solid thin #ccc; }
+
+.list-heading {
+  margin-bottom: 1em; }
+
+.content-wrapper {
+  padding-left: 0;
+  padding-right: 0; }
+
+.projects-list {
+  background-color: #eee;
+  padding: 1em; }
+  .projects-list .project {
+    width: calc(16.6666666666% - 16px);
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    color: #607d8b;
+    margin: 0 2em 2em 0; }
+    .projects-list .project .project-peek {
+      background-color: white;
+      font-size: 3em;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 4em;
+      height: 4em;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      border: solid thin #ccc; }
+      .projects-list .project .project-peek .glyphicon {
+        -ms-flex-item-align: center;
+        align-self: center; }
+    .projects-list .project .project-name .glyphicon {
+      margin: 0.5em; }
+    .projects-list .project .project-name .project-label {
+      color: black; }
 
 /*# sourceMappingURL=app.css.map */

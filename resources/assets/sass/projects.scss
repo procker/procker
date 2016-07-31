@@ -1,0 +1,38 @@
+$projectsBackground: #eee;
+$prockerColor: #607d8b;
+$iconSize: 3em;
+.projects-list{
+  background-color: $projectsBackground;
+  padding: 1em;
+  .project{
+    width: calc(16.6666666666% - 16px);
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    color: $prockerColor;
+    margin: 0 2em 2em 0;
+    .project-peek{
+      background-color: white;
+      font-size: $iconSize;
+      display: flex;
+      align-items: center;
+      width: 4em;
+      height: 4em;
+      flex-direction: column;
+      justify-content: center;
+      border: solid thin #ccc;
+      .glyphicon{
+        align-self: center;
+      }
+    }
+    .project-name{
+      .glyphicon{
+        margin: 0.5em;
+      }
+      .project-label{
+        color: black;
+      }
+    }
+  }
+}

@@ -74,7 +74,8 @@
     </nav>
     <div class="container-fluid app-wrapper">
         <div class="sidebar col-lg-2">
-            <button class="btn btn-primary new-project">NEW</button>
+            @yield('sidebar')
+
         </div>
         <div class="content-wrapper col-lg-10">
             @yield('content')

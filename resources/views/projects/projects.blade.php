@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('sidebar')
+<button class="btn btn-primary new-project">NEW</button>
+@endsection
 
 @section('content')
 <div class="container-fluid" ng-controller="projectsCtrl as projects">

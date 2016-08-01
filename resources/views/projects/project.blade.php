@@ -10,6 +10,9 @@
             <h1>@{{ vm.project.name }}</h1>
         </div>
     </div>
+    <div class="row">
+        @yield('project-content')
+    </div>
 </div>
 @endsection
 

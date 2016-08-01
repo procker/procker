@@ -20,4 +20,5 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('projects', 'ProjectController@view');
 Route::get('projects/{id}','ProjectController@viewProject');
+Route::get('projects/{id}/noteboard','NoteboardController@viewBoard');
 Route::resource('project','ProjectController');

@@ -17,4 +17,9 @@ class Project extends Model
 	{
 		return $this->hasMany('App\TaskGroups');
 	}
+
+	public function noteboard()
+	{
+		return $this->hasOne('App\Noteboard');
+	}
 }

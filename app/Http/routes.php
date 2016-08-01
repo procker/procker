@@ -19,4 +19,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('projects', 'ProjectController@view');
+Route::get('projects/{id}','ProjectController@viewProject');
 Route::resource('project','ProjectController');

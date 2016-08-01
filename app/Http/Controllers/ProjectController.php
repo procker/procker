@@ -56,8 +56,6 @@ class ProjectController extends Controller
 		$project->name = $request->name;
 		$project->description = $request->description;
 		\Auth::user()->projects()->save($project);
-//		$project->user = \Auth::user();
-//		$project->save();
 
 		return response()->json($project);
         //
@@ -71,8 +69,15 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Auth::user()->projects()->find($id);
+		return response()->json($project);
     }
+
+	public function viewProject($id)
+	{
+		$project = Auth::user()->projects()->find($id);
+		return view('projects.project', compact('project'));
+	}
 
     /**
      * Show the form for editing the specified resource.

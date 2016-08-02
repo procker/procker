@@ -12,10 +12,12 @@ class CreateNoteboardGroupTable extends Migration
      */
     public function up()
     {
-		Schema::create('noteboardGroups', function (Blueprint $table) {
+		Schema::create('noteboard_groups', function (Blueprint $table) {
 			$table->increments('id');
 			$table->integer('noteboard_id')->unsigned();
 			$table->string('name');
+			$table->string('backgroundColor');
+			$table->string('color');
 			$table->timestamps();
 
 			$table->foreign('noteboard_id')->references('id')->on('noteboards');

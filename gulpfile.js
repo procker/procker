@@ -18,6 +18,7 @@ elixir(function(mix) {
         'projects/projects.controller.js',
         'project/project.module.js',
         'project/project.controller.js',
+        'noteboard/noteboard.controller.js',
         'procker.module.js',
         'procker.controller.js'
     ],'public/js/app.js').scripts([

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Noteboard extends Model
 {
-	protected $fillable = ['project_id'];
+	protected $fillable = ['name'];
 
 	public function project()
 	{

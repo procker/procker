@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NoteboardGroup extends Model
 {
+	protected $fillable = ['name'];
 
 	public function noteboard()
 	{

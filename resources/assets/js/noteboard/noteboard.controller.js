@@ -6,7 +6,7 @@
     noteboardCtrl.$inject = ['$http', 'PROJECT_ID', 'CSRF_TOKEN'];
     function noteboardCtrl($http, PROJECT_ID, CSRF_TOKEN) {
         var vm = this;
-        vm.groups = [];
+        vm.noteboardGroups = [];
         vm.newGroup = {
             name: ''
         };
@@ -23,13 +23,17 @@
                 }
             };
             $http(req).then(function (data) {
-                vm.groups.push(data);
+                vm.noteboardGroups.push(data.data);
+                vm.resetNewGroup();
             });
+        };
+        vm.resetNewGroup = function(){
+            vm.newGroup.name = '';
         };
         vm.getGroups = function(){
             var req = {
                 method: 'get',
-                url: '/group',
+                url: 'noteboard/groups',
                 data: {
                     projectId: PROJECT_ID
                 },
@@ -38,8 +42,7 @@
                 }
             };
             $http(req).then(function (data) {
-                console.log(data);
-                //vm.groups.push(data);
+                vm.noteboardGroups = data.data;
             });
         };
         vm.getGroups();

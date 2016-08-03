@@ -23,3 +23,4 @@ Route::get('projects/{id}','ProjectController@viewProject');
 Route::get('projects/{id}/noteboard','NoteboardController@viewBoard');
 Route::resource('project','ProjectController');
 Route::resource('group', 'GroupController');
+Route::get('projects/{id}/noteboard/groups', 'NoteboardController@groups');

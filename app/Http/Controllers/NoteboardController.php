@@ -35,6 +35,13 @@ class NoteboardController extends Controller
 		return view('projects.boards.board', compact('project'));
 	}
 
+	public function groups($projectId)
+	{
+		$project = Auth::user()->projects()->find($projectId);
+		$noteboardGroups = $project->noteboard->noteboardGroups;
+		return response()->json($noteboardGroups);
+	}
+
 
     /**
      * Store a newly created resource in storage.

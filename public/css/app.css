@@ -65,4 +65,37 @@ body {
     .projects-list .project .project-name .project-label {
       color: black; }
 
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+.noteboard-groups {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .noteboard-groups .noteboard-group, .noteboard-groups .new-group {
+    position: relative;
+    width: 22em;
+    margin: 1em; }
+  .noteboard-groups .noteboard-group {
+    background-color: whitesmoke;
+    border: #ccc thin solid; }
+    .noteboard-groups .noteboard-group .group-name {
+      font-size: 2em;
+      text-align: center; }
+    .noteboard-groups .noteboard-group .group-notes {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 1em; }
+      .noteboard-groups .noteboard-group .group-notes .sticky-note {
+        background-color: yellow;
+        box-shadow: #ccc 3px 3px 3px;
+        position: relative;
+        width: 20em;
+        height: 20em;
+        padding: 1em;
+        font-family: 'Just Another Hand', Helvetica, sans-serif; }
+
 /*# sourceMappingURL=app.css.map */

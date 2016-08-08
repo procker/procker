@@ -5,6 +5,9 @@
             <div class="group-name">
                 <span ng-bind="noteboardGroup.name"></span>
             </div>
+            <div class="group-notes">
+                <div ng-repeat="note in noteboardGroup.notes" class="sticky-note"></div>
+            </div>
         </div>
         <div class="new-group">
             <div class="new-group-form">

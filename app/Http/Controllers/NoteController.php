@@ -80,7 +80,14 @@ class NoteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$validator = Validator::make($request->all(), []);
+		if($validator->fails()){}
+
+		$noteboardGroup = Auth::user()->projects()->find($request->projectId)->noteboard->noteboardGroups->find($request->groupId);
+		$note = $noteboardGroup->notes->find($id);
+		$note->content = $request->note['content'];
+		$note->save();
+        return response()->json($note);
     }
 
     /**

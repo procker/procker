@@ -125,7 +125,6 @@
         };
         vm.getGroups();
         vm.addNoteToGroup = function(note, groupId){
-            console.log(note, groupId);
             var req = {
                 method: 'post',
                 url: '/note',
@@ -137,6 +136,25 @@
                 headers: {
                     'csrftoken': CSRF_TOKEN
                 }
+            };
+            $http(req).then(function(data){
+                console.log(data);
+            });
+        };
+        vm.saveNote = function(note, groupId){
+            console.log(note, groupId);
+            var req = {
+                method: 'put',
+                url: '/note/'+note.id,
+                data: {
+                    projectId: PROJECT_ID,
+                    note: note,
+                    groupId: groupId
+                },
+                headers: {
+                    'csrftoken': CSRF_TOKEN
+                }
+
             };
             $http(req).then(function(data){
                 console.log(data);

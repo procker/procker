@@ -92,6 +92,7 @@ body {
       .noteboard-groups .noteboard-group .group-notes .sticky-note {
         background-color: yellow;
         box-shadow: #ccc 3px 3px 3px;
+        margin-bottom: 1em;
         position: relative;
         width: 20em;
         height: 20em;

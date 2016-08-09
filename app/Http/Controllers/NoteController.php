@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Validator;
+use App\Note;
 use Auth;
 
-class NoteboardController extends Controller
+class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,23 +31,6 @@ class NoteboardController extends Controller
         //
     }
 
-	public function viewBoard($id)
-	{
-		$project = Auth::user()->projects()->find($id);
-		return view('projects.boards.board', compact('project'));
-	}
-
-	public function groups($projectId)
-	{
-		$project = Auth::user()->projects()->find($projectId);
-		$noteboardGroups = $project->noteboard->noteboardGroups;
-		foreach($noteboardGroups as $noteboardGroup){
-			$noteboardGroup->notes;
-		}
-		return response()->json($noteboardGroups);
-	}
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -54,7 +39,14 @@ class NoteboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$validator = Validator::make($request->all(), []);
+		if($validator->fails()){}
+
+		$note = new Note;
+		$note->content = $request->note['content'];
+		$noteboardGroup = Auth::user()->projects()->find($request->projectId)->noteboard->noteboardGroups->find($request->groupId);
+		$noteboardGroup->notes()->save($note);
+		return response()->json($note);
     }
 
     /**

@@ -12,4 +12,9 @@ class NoteboardGroup extends Model
 	{
 		return $this->belongsTo('App\Noteboard');
     }
+
+	public function notes()
+	{
+		return $this->hasMany('App\Note');
+	}
 }

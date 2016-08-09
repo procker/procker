@@ -6,7 +6,13 @@
                 <span ng-bind="noteboardGroup.name"></span>
             </div>
             <div class="group-notes">
-                <div ng-repeat="note in noteboardGroup.notes" class="sticky-note"></div>
+                <div ng-repeat="note in noteboardGroup.notes" class="sticky-note">
+                @{{note.content}}
+                </div>
+                <div class="new-note" ng-init="newNoteContent">
+                    <textarea ng-model="newNoteContent.content"></textarea>
+                    <button class="btn btn-primary" ng-click="vm.addNoteToGroup(newNoteContent, noteboardGroup.id)">Add</button>
+                </div>
             </div>
         </div>
         <div class="new-group">

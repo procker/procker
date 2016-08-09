@@ -46,5 +46,23 @@
             });
         };
         vm.getGroups();
+        vm.addNoteToGroup = function(note, groupId){
+            console.log(note, groupId);
+            var req = {
+                method: 'post',
+                url: '/note',
+                data: {
+                    projectId: PROJECT_ID,
+                    note: note,
+                    groupId: groupId
+                },
+                headers: {
+                    'csrftoken': CSRF_TOKEN
+                }
+            };
+            $http(req).then(function(data){
+                console.log(data);
+            });
+        };
     }
 })();

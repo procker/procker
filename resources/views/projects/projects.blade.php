@@ -21,14 +21,16 @@
             <div class="list-heading">
                 Projects
             </div>
-            <div class="project" ng-repeat="project in projects.projects">
-                <div class="project-peek">
-                    <span class="glyphicon glyphicon-th-large"></span>
+            <a ng-href="/projects/@{{project.id}}/noteboard" ng-repeat="project in projects.projects">
+                <div class="project">
+                    <div class="project-peek">
+                        <span class="glyphicon glyphicon-th-large"></span>
+                    </div>
+                    <div class="project-name">
+                        <span class="glyphicon glyphicon-th-large"></span> <span class="project-label">@{{ project.name }}</span>
+                    </div>
                 </div>
-                <div class="project-name">
-                    <span class="glyphicon glyphicon-th-large"></span> <span class="project-label">@{{ project.name }}</span>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
